@@ -18,11 +18,6 @@ public class PlainLoginTest {
         driver = new ChromeDriver();
     }
 
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
-
     @Test
     public void login() {
         driver.get("https://the-internet.herokuapp.com/login");
@@ -34,4 +29,10 @@ public class PlainLoginTest {
         driver.findElement(By.cssSelector(".icon-2x")).click();
         driver.close();
     }
+
+    @AfterClass
+    public void tearDown() {
+        driver.quit();
+    }
+
 }
